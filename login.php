@@ -20,6 +20,15 @@
             $ip = $_SERVER['REMOTE_ADDR'];
 
             $_SESSION['lg'] = $id;
+
+            $stmt = "UPDATE usuarios SET ip = :ip WHERE id = :id";
+            $stmt = $conn->prepare($stmt);
+            $stmt->bindValue(":ip", $ip);
+            $stmt->bindValue(":id", $id);
+            $stmt->execute();
+
+            header("Location: index.php");
+            exit;
         }
     }
 
