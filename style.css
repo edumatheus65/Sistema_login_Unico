@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,100;1,300&family=Montserrat:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:wght@800&display=swap');
+
+.fluid-img {
+    background: linear-gradient(rgba(72, 73, 67, 0.801), rgba(62, 63, 58, 0.801)100%), url('./img/img-1.jpg');
+    background-size: cover;
+    
+      
+    
+       
+    
+}
+
+.btn-primary {
+    color: #FFB93D;
+}
+
+.title {
+    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Playfair Display', serif;
+    color: rgb(240, 240, 240);
+    gap: 50px;
+}
+
+
+
+
+
+#form-container {
+    background-color: #fafafa15;
+    border-radius: 20px;
+    box-shadow: .5px 10px 15px rgba(0, 0, 0, .2);
+    margin: 25px auto;
+    padding: 30px;
+}
+
+@media(min-width: 768px) {
+    #form-container {
+        margin: 50px auto;
+    }   
+}
+
+@media screen and (max-width: 768px) {
+    
+    .container #form-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #item-1 {
+        order: 1;
+    }
+
+    .item-2 {
+        order: 2;
+    }
+}
+
+@media(max-width: 1361px) {
+    .title {
+        font-size: 2.2rem;
+    }
+}
+
+@media(min-height: 840px) {
+    #form-container {
+       margin-top: 5%;
+       padding: 90px;
+       
+    }
+}
+
+
+
+/* @media(min-height: 741px) {
+    body {
+                  
+        background-position: y -200px;
+    }
+} */
+
+#form-container h1 {
+    font-weight: 900;
+    margin-bottom: 30px;    
+}
+
+#form-container a {
+    color: #222;
+    transition: .5s;
+}
+
+#form-container form {
+    padding-bottom: 50px;
+}
+
+#form-container .form-control {
+    /* border: none; */
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    border-color: black;
+    
+        
+}
+
+
+
+.btn-warning {
+    width: 40%;
+}
