@@ -8,7 +8,19 @@
         $email = $_POST['email'];
         $senha = $_POST['senha'];
 
-        
+        $stmt = "SELECT * FROM usuarios WHERE email = :email AND senha = MD5(:senha)";
+        $stmt = $conn->prepare($stmt);
+        $stmt->bindValue(":email", $email);
+        $stmt->bindValue(":senha", $senha);
+        $stmt->execute();
+
+        if($stmt->rowCount() > 0) {
+            $stmt = $stmt->fetch();
+            $id = $stmt['id'];
+            $ip = $_SERVER['REMOTE_ADDR'];
+
+            $_SESSION['lg'] = $id;
+        }
     }
 
 ?>
