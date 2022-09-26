@@ -4,6 +4,8 @@
 
     require 'conexao.php';
 
+    $_SESSION['lg'] = '';
+
     
 
     if(isset($_POST['email']) && !empty($_POST['email'])) {
